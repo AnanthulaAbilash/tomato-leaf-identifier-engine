@@ -1,6 +1,7 @@
 from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-import uvicorn
+""" import uvicorn """
+from waitress import serve
 import numpy as np
 from io import BytesIO
 from PIL import Image
@@ -68,7 +69,8 @@ async def disease_cls( ):
 PORT = os.environ.get('PORT', 5000)
 
 if __name__ == "__main__":
-    uvicorn.run(app, port=PORT)
+    """ uvicorn.run(app, port=PORT) """
+    serve(app, port=PORT)
     
 
 
