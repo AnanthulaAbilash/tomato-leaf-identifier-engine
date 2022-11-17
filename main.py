@@ -6,6 +6,7 @@ from io import BytesIO
 from PIL import Image
 import tensorflow as tf
 import json
+import os
 
 app = FastAPI()
 
@@ -64,8 +65,10 @@ async def disease_cls( ):
     
     return list(CLASS_NAMES)
 
+PORT = os.environ.get('PORT', 5000)
+
 if __name__ == "__main__":
-    uvicorn.run(app, host='localhost', port=5000)
+    uvicorn.run(app, port=PORT)
     
 
 
