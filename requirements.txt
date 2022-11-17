@@ -3,5 +3,5 @@ numpy
 Pillow
 requests
 tensorflow-cpu
-waitress
+uvicorn
 python-multipart
