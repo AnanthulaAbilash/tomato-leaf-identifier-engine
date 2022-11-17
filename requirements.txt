@@ -4,3 +4,4 @@ Pillow
 requests
 tensorflow-cpu
 uvicorn
+python-multipart
